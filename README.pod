@@ -1,0 +1,36 @@
+=pod
+
+=head1 NAME
+
+Dist::Zilla::Plugin::MojibakeTests - Release tests for source encoding
+
+=head1 VERSION
+
+version 0.1
+
+=head1 SYNOPSIS
+
+In F<dist.ini>:
+
+    [MojibakeTests]
+
+=head1 DESCRIPTION
+
+This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the following file:
+
+    xt/release/mojibake.t - a standard Test::Mojibake test
+
+=for test_synopsis 1;
+__END__
+
+=head1 AUTHOR
+
+Stanislaw Pusep <stas@sysd.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Stanislaw Pusep.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
