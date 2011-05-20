@@ -6,7 +6,7 @@ use strict;
 use utf8;
 use warnings 'all';
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 use 5.008;
 use Moose;
