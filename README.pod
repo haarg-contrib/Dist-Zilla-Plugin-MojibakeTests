@@ -1,12 +1,14 @@
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::MojibakeTests - Release tests for source encoding
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =head1 SYNOPSIS
 
