@@ -1,16 +1,13 @@
-#!/usr/bin/perl
 package Dist::Zilla::Plugin::MojibakeTests;
 # ABSTRACT: Release tests for source encoding
 
 use strict;
-use utf8;
-use warnings 'all';
+use warnings qw(all);
 
-our $VERSION = '0.3';
+# VERSION
 
-use 5.008;
 use Moose;
-extends 'Dist::Zilla::Plugin::InlineFiles';
+extends q(Dist::Zilla::Plugin::InlineFiles);
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
@@ -40,10 +37,13 @@ __DATA__
 ___[ xt/release/mojibake.t ]___
 #!perl
 
+use strict;
+use warnings qw(all);
+
 use Test::More;
 
-eval 'use Test::Mojibake';
-plan skip_all => 'Test::Mojibake required for source encoding testing'
-    if $@;
+## no critic (ProhibitStringyEval, RequireCheckingReturnValueOfEval)
+eval q(require Test::Mojibake);
+plan skip_all => q(Test::Mojibake required for source encoding testing) if $@;
 
 all_files_encoding_ok();
