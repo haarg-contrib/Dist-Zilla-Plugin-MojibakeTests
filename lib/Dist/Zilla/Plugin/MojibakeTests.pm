@@ -8,6 +8,18 @@ use warnings qw(all);
 
 use Moose;
 extends q(Dist::Zilla::Plugin::InlineFiles);
+with 'Dist::Zilla::Role::PrereqSource';
+
+sub register_prereqs {
+    my $self = shift;
+    $self->zilla->register_prereqs(
+        {
+            type  => 'requires',
+            phase => 'develop',
+        },
+        'Test::Mojibake' => 0,
+    );
+}
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
@@ -41,9 +53,6 @@ use strict;
 use warnings qw(all);
 
 use Test::More;
-
-## no critic (ProhibitStringyEval, RequireCheckingReturnValueOfEval)
-eval q(use Test::Mojibake);
-plan skip_all => q(Test::Mojibake required for source encoding testing) if $@;
+use Test::Mojibake;
 
 all_files_encoding_ok();
