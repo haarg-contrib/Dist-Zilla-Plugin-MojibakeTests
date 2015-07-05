@@ -1,5 +1,5 @@
 package Dist::Zilla::Plugin::MojibakeTests;
-# ABSTRACT: Release tests for source encoding
+# ABSTRACT: Author tests for source encoding
 
 use strict;
 use warnings qw(all);
@@ -26,7 +26,7 @@ In F<dist.ini>:
 
 This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the following file:
 
-    xt/release/mojibake.t - a standard Test::Mojibake test
+    xt/author/mojibake.t - a standard Test::Mojibake test
 
 =for test_synopsis 1;
 __END__
@@ -34,7 +34,7 @@ __END__
 =cut
 
 __DATA__
-___[ xt/release/mojibake.t ]___
+___[ xt/author/mojibake.t ]___
 #!perl
 
 use strict;
