@@ -4,11 +4,11 @@
 
 =head1 NAME
 
-Dist::Zilla::Plugin::MojibakeTests - Release tests for source encoding
+Dist::Zilla::Plugin::MojibakeTests - Author tests for source encoding
 
 =head1 VERSION
 
-version 0.7
+version 0.8
 
 =head1 SYNOPSIS
 
@@ -20,7 +20,9 @@ In F<dist.ini>:
 
 This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the following file:
 
-    xt/release/mojibake.t - a standard Test::Mojibake test
+    xt/author/mojibake.t - a standard Test::Mojibake test
+
+=for Pod::Coverage register_prereqs
 
 =for test_synopsis 1;
 __END__

@@ -10,9 +10,13 @@ use Moose;
 extends q(Dist::Zilla::Plugin::InlineFiles);
 with 'Dist::Zilla::Role::PrereqSource';
 
+=for Pod::Coverage
+register_prereqs
+=cut
+
 sub register_prereqs {
     my $self = shift;
-    $self->zilla->register_prereqs(
+    return $self->zilla->register_prereqs(
         {
             type  => 'requires',
             phase => 'develop',
